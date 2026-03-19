@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What to See - Treviso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-dark-green: #2e4f21;
+            --color-light-green: #d2f8dc;
+            --color-bg-grey: #f4f7f5;
+            --color-card-grey: #eaeaea;
+            --color-white: #ffffff;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        body { font-family: var(--font-main); margin: 0; padding: 0; color: var(--color-dark-green); }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; }
+
+        .site-header { background-color: var(--color-bg-grey); padding: 20px 0; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 40px; }
+        .nav-link { text-decoration: none; color: var(--color-dark-green); margin-right: 20px; font-size: 14px; }
+        .btn-primary { background: var(--color-dark-green); color: white; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; }
+
+        .hero { background: var(--color-dark-green); color: white; padding: 100px 0; text-align: center; }
+        .hero h1 { font-size: 64px; margin-bottom: 20px; }
+
+        /* Step Cards */
+        .features-container { padding: 80px 0; display: flex; flex-direction: column; gap: 40px; }
+        .step-card { display: flex; background: var(--color-card-grey); border-radius: 20px; overflow: hidden; min-height: 400px; box-shadow: inset 0px 4px 4px rgba(0,0,0,0.1); }
+        .step-number { font-size: 150px; font-weight: 300; color: var(--color-dark-green); opacity: 0.2; padding: 40px; display: flex; align-items: center; justify-content: center; min-width: 150px; }
+        .step-content { display: flex; flex: 1; padding: 40px; gap: 40px; align-items: center; }
+        .step-text { flex: 1; }
+        .step-text h3 { font-size: 32px; margin-bottom: 20px; }
+        .step-image { flex: 1; height: 350px; }
+        .step-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 15px; }
+
+        /* Q&A */
+        .qa-section { padding: 80px 0; background: var(--color-bg-grey); }
+        .qa-card { background: var(--color-light-green); padding: 40px; border-radius: 20px; margin-bottom: 20px; }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .step-card { flex-direction: column; }
+            .step-content { flex-direction: column; }
+            .step-number { font-size: 80px; padding: 20px; }
+            .step-image { width: 100%; height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-content">
+        <div class="logo"><a href="index.html"><img src="images/R-removebg-preview.png" alt="Logo"></a></div>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="booking.html" class="btn-primary">Book a Stay!</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>3 Things You Can’t Miss</h1>
+        <p>Explore our top 3 greatest places in our city!</p>
+    </div>
+</section>
+
+<div class="container features-container">
+    <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-content">
+            <div class="step-text">
+                <h3>The city centre</h3>
+                <p>Explore the beautiful historic city centre and visit “Piazza dei Signori” or “Palazzo del Podestá”. Don't miss the famous “Fontana delle tette” and the medieval gates like Porta San Tommaso.</p>
+            </div>
+            <div class="step-image"><img src="images/elsohome.jpg" alt="City Centre"></div>
+        </div>
+    </div>
+
+    <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-content">
+            <div class="step-text">
+                <h3>Le Colline del Prosecco</h3>
+                <p>UNESCO Heritage hills located in Conegliano and Valdobbiadene. A breathtaking landscape dedicated to producing the world-famous Prosecco wine.</p>
+            </div>
+            <div class="step-image"><img src="images/2.jpg" alt="Prosecco Hills"></div>
+        </div>
+    </div>
+
+    <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-content">
+            <div class="step-text">
+                <h3>Grotte del Caglieron</h3>
+                <p>A complex of natural and artificial caves in Fregona. Features deep waterfalls shaped by the stream for over a million years.</p>
+            </div>
+            <div class="step-image"><img src="images/3.jpg" alt="Caglieron Caves"></div>
+        </div>
+    </div>
+</div>
+
+<section class="qa-section">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 50px;">Frequently Asked Questions</h2>
+        <div class="qa-card">
+            <h3>How do I get to the city center?</h3>
+            <p>Treviso Airport (TSF) is well connected by shuttle buses and taxis, reaching the center in 10-20 minutes.</p>
+        </div>
+        <div class="qa-card">
+            <h3>Is Treviso good for visiting Venice?</h3>
+            <p>Yes! It's only 30-40 minutes by train, offering a quieter and more affordable stay than Venice.</p>
+        </div>
+    </div>
+</section>
+
+<footer style="background: var(--color-dark-green); color: white; padding: 40px 0; text-align: center;">
+    <p>© 2026 Treviso City Guide</p>
+</footer>
+
+</body>
+</html>

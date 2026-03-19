@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# 1. Ha a kért fájl nem könyvtár
+RewriteCond %{REQUEST_FILENAME} !-d
+# 2. És ha a kért fájl létezik .html kiterjesztéssel
+RewriteCond %{REQUEST_FILENAME}\.html -f
+# 3. Akkor belsőleg irányítsa át a .html fájlra
+RewriteRule ^([^\.]+)$ $1.html [NC,L]

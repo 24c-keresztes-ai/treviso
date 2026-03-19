@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Treviso Stay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-dark-green: #2e4f21;
+            --color-mid-green: #506349;
+            --color-light-green: #a0f1bd;
+            --color-bg-light: #f4f7f5;
+            --color-white: #ffffff;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        body { 
+            font-family: var(--font-main); 
+            margin: 0; 
+            padding: 0; 
+            background-color: var(--color-white); 
+            color: var(--color-dark-green);
+            line-height: 1.6;
+        }
+
+        .container { 
+            max-width: 1280px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+            box-sizing: border-box; 
+        }
+
+        /* Header */
+        .site-header { 
+            background-color: var(--color-bg-light); 
+            padding: 20px 0; 
+            border-bottom: 1px solid #ddd; 
+        }
+        .header-inner { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .logo img { height: 40px; }
+        .nav-links { display: flex; align-items: center; gap: 20px; }
+        .nav-link { 
+            color: var(--color-dark-green); 
+            text-decoration: none; 
+            font-weight: 500; 
+            font-size: 14px; 
+        }
+        .btn-dark { 
+            background-color: var(--color-dark-green); 
+            color: white; 
+            padding: 12px 24px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-size: 14px; 
+            font-weight: 600;
+        }
+
+        /* Hero / Title Section */
+        .booking-hero {
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+        .booking-hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        /* Grid & Cards */
+        .booking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 40px 0 80px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .card-content p {
+            font-size: 15px;
+            color: var(--color-mid-green);
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .card-link {
+            display: inline-block;
+            background: var(--color-dark-green);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer { 
+            background: var(--color-dark-green); 
+            color: #d5e4d0; 
+            padding: 60px 0 30px; 
+        }
+        .footer-inner { 
+            display: flex; 
+            justify-content: space-between; 
+            flex-wrap: wrap; 
+            gap: 40px; 
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .booking-hero h1 { font-size: 32px; }
+            .booking-grid { grid-template-columns: 1fr; }
+            .header-inner { flex-direction: column; gap: 15px; }
+            .footer-inner { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <a href="index.html"><img src="images/R-removebg-preview.png" alt="Logo"></a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="whattosee.html" class="nav-link">What to see?</a>
+            <a href="booking.html" class="btn-dark">Book a stay!</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="booking-hero">
+        <h1>Find Your Perfect Stay</h1>
+        <p>Handpicked accommodations for an unforgettable experience in Treviso.</p>
+    </section>
+
+    <div class="booking-grid">
+        <article class="card">
+            <div class="card-image">
+                <img src="images/1.jpg" alt="Ca’ del poggio">
+            </div>
+            <div class="card-content">
+                <h3>Ca’ del Poggio</h3>
+                <p>A famous resort in the heart of the Prosecco hills, close to Conegliano and Valdobbiadene. It offers a unique landscape and premium services.</p>
+                <a href="https://www.booking.com/hotel/it/ca-del-poggio-ristorante-amp-resort.hu.html" target="_blank" class="card-link">View on Booking.com</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-image">
+                <img src="images/2.jpg" alt="Urban 34">
+            </div>
+            <div class="card-content">
+                <h3>Urban 34 - Station & Centre</h3>
+                <p>Modern and strategically located near the train station and the city center. Perfect for urban explorers and business travelers.</p>
+                <a href="https://www.booking.com/hotel/it/urban-34-station-amp-centre-treviso.hu.html" target="_blank" class="card-link">View on Booking.com</a>
+            </div>
+        </article>
+    </div>
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <div>
+            <h3>Treviso Tourism</h3>
+            <p>Authentic Italian hospitality.</p>
+        </div>
+        <div>
+            <a href="index.html" style="color: white; margin-right: 20px; text-decoration: none;">Home</a>
+            <a href="whattosee.html" style="color: white; text-decoration: none;">What to see</a>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 40px; opacity: 0.6; font-size: 12px; text-align: center;">
+        © 2026 Treviso City Guide - All Rights Reserved
+    </div>
+</footer>
+
+</body>
+</html>
